@@ -1,0 +1,51 @@
+Performance Test Plan
+
+Objective: Validate that the checkout flow performs well under expected and peak user loads.
+
+Test Environment:
+
+Application URL: [Insert URL]
+
+Server Details: [Insert server spec, location, DB, etc.]
+
+Tool: [e.g., Apache JMeter v5.5]
+
+Assumptions:
+
+Average user session time: 5–10 minutes
+
+Peak users: 1000 concurrent users
+
+Data will be reused for virtual users (with parameterization)
+
+Key Performance Indicators (KPIs):
+
+Response Time: Should be < 2s for 95% of requests
+
+Throughput: Number of requests handled per second
+
+Error Rate: Should be < 1%
+
+Resource Usage: CPU < 80%, Memory < 75%
+
+Test Scenarios:
+
+Load Testing
+
+Stress Testing
+
+Spike Testing
+
+Soak Testing
+
+Risks & Mitigation:
+
+Risk: API server throttling → Mitigation: Gradual ramp-up, staggered user load
+
+Risk: Test data depletion → Mitigation: Data parameterization, data pool reset scripts
+
+Test Exit Criteria:
+
+All KPIs are met under expected loads
+
+No critical failures or SLA breaches
